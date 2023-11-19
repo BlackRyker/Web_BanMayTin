@@ -1,5 +1,6 @@
 package com.se.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "chiTietDh")
-public class ChiTietDh {
+public class ChiTietDh implements Serializable {
 	@Id
 	@ManyToOne
 	@JoinColumn(name = "maDh")

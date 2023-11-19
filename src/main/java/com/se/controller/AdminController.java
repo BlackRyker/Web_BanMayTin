@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
-public class SanPhamController {
+@RequestMapping("/admin")
+public class AdminController {
 
 	@Autowired
 	private SanPhamService sanPhamService;

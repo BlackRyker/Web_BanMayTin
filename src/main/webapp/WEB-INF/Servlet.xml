@@ -17,16 +17,13 @@
 	<!-- 3: Add support for component scanning : các package chứa các thành 
 		phần xử ký -->
 	<context:component-scan
-		base-package="se.com.controller, 
-		com.se.dao,
-		com.se.service, 
-		com.se.entity">
+		base-package="com.se">
 	</context:component-scan>
 
 	<!-- 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven />
 	<!-- 5: Define Spring MVC view resolver: ViewResolver (xử lý View), các 
-		View là tập tin JSP được ánh xạ từ thư mục /WEB-INF/view/ -->
+		View là tập tin JSP được ánh xạ từ thư mục /WEB-INF/views/ -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
@@ -36,14 +33,18 @@
 	<!-- Step 1: Define Database DataSource / connection pool -->
 
 	<bean id="myDataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass"
 			value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-		<property name="url"
+		<property name="jdbcUrl"
 			value="jdbc:sqlserver://localhost:1433;databaseName=QLBan_PC" />
-
-		<property name="username" value="sa" />
+		<property name="user" value="sa" />
 		<property name="password" value="123456789" />
+		<!-- these are connection pool properties for C3P0 -->
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="20" />
+		<property name="maxIdleTime" value="30000" />
 	</bean>
 
 	<!-- Step 2: Setup Hibernate session factory -->

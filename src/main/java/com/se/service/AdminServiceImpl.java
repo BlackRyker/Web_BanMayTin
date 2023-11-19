@@ -10,7 +10,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 @Service
-public class SanPhamServiceImpl implements SanPhamService {
+public class AdminServiceImpl implements AdminService {
 
 	@Autowired
 	private SanPhamDAO sanPhamDAO;
@@ -32,6 +32,12 @@ public class SanPhamServiceImpl implements SanPhamService {
 	public SanPham getSanPhamById(int maSp) {
 		// TODO Auto-generated method stub
 		return sanPhamDAO.getSanPhamById(maSp);
+	}
+
+	@Override
+	public SanPham getSanPham(int maSp) {
+		// TODO Auto-generated method stub
+		return sanPhamDAO.getSanPham(maSp);
 	}
 
 	@Override

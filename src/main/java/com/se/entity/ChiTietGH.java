@@ -1,5 +1,7 @@
 package com.se.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,36 +13,28 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "chiTietGh")
-public class ChiTietGH {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "maCtgh")
-    private int maCTGH;
+public class ChiTietGH implements Serializable {
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "maGh", nullable = false)
+	private GioHang gioHang;
 
-    @Column(name = "soLuong")
-    private int soLuong;
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "maSp", nullable = false)
+	private SanPham sanPham;
 
-    @ManyToOne
-    @JoinColumn(name = "maGh", nullable = false)
-    private GioHang gioHang;
+	@Column(name = "soLuong")
+	private int soLuong;
 
-    @ManyToOne
-    @JoinColumn(name = "maSp", nullable = false)
-    private SanPham sanPham;
-
-	public int getMaCTGH() {
-		return maCTGH;
+	public ChiTietGH() {
+		super();
 	}
 
-	public void setMaCTGH(int maCTGH) {
-		this.maCTGH = maCTGH;
-	}
-
-	public int getSoLuong() {
-		return soLuong;
-	}
-
-	public void setSoLuong(int soLuong) {
+	public ChiTietGH(GioHang gioHang, SanPham sanPham, int soLuong) {
+		super();
+		this.gioHang = gioHang;
+		this.sanPham = sanPham;
 		this.soLuong = soLuong;
 	}
 
@@ -60,24 +54,17 @@ public class ChiTietGH {
 		this.sanPham = sanPham;
 	}
 
-	public ChiTietGH() {
-		super();
-		// TODO Auto-generated constructor stub
+	public int getSoLuong() {
+		return soLuong;
 	}
 
-	public ChiTietGH(int maCTGH, int soLuong, GioHang gioHang, SanPham sanPham) {
-		super();
-		this.maCTGH = maCTGH;
+	public void setSoLuong(int soLuong) {
 		this.soLuong = soLuong;
-		this.gioHang = gioHang;
-		this.sanPham = sanPham;
 	}
 
 	@Override
 	public String toString() {
-		return "ChiTietGH [maCTGH=" + maCTGH + ", soLuong=" + soLuong + ", gioHang=" + gioHang + ", sanPham=" + sanPham
-				+ "]";
+		return "ChiTietGH [gioHang=" + gioHang + ", sanPham=" + sanPham + ", soLuong=" + soLuong + "]";
 	}
-    
-    
+
 }
