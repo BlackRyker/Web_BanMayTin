@@ -14,35 +14,36 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "sanPham")
 public class SanPham {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "maSp")
-    private int maSp;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "maSp")
+	private int maSp;
 
-    @Column(name = "tenSp")
-    private String tenSp;
+	@Column(name = "tenSp")
+	private String tenSp;
 
-    @Column(name = "giaSp")
-    private BigDecimal giaSp;
+	@Column(name = "giaSp")
+	private BigDecimal giaSp;
 
-    @Column(name = "moTaSp")
-    private String moTaSp;
+	@Column(name = "moTaSp")
+	private String moTaSp;
 
-    @Column(name = "soLuong")
-    private int soLuong;
+	@Column(name = "soLuong")
+	private int soLuong;
 
-    @Column(name = "anhSp")
-    private String anhSp;
+	@Column(name = "anhSp")
+	private String anhSp;
 
-    @Column(name = "trangThai")
-    private boolean trangThai;
+	@ManyToOne
+	@JoinColumn(name = "maLoai", nullable = false)
+	private LoaiSanPham loaiSanPham;
 
-    @ManyToOne
-    @JoinColumn(name = "maLoai", nullable = false)
-    private LoaiSanPham loaiSanPham;
+	public SanPham() {
+		super();
+	}
 
 	public SanPham(int maSp, String tenSp, BigDecimal giaSp, String moTaSp, int soLuong, String anhSp,
-			boolean trangThai, LoaiSanPham loaiSanPham) {
+			LoaiSanPham loaiSanPham) {
 		super();
 		this.maSp = maSp;
 		this.tenSp = tenSp;
@@ -50,13 +51,7 @@ public class SanPham {
 		this.moTaSp = moTaSp;
 		this.soLuong = soLuong;
 		this.anhSp = anhSp;
-		this.trangThai = trangThai;
 		this.loaiSanPham = loaiSanPham;
-	}
-
-	public SanPham() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getMaSp() {
@@ -107,14 +102,6 @@ public class SanPham {
 		this.anhSp = anhSp;
 	}
 
-	public boolean isTrangThai() {
-		return trangThai;
-	}
-
-	public void setTrangThai(boolean trangThai) {
-		this.trangThai = trangThai;
-	}
-
 	public LoaiSanPham getLoaiSanPham() {
 		return loaiSanPham;
 	}
@@ -126,8 +113,7 @@ public class SanPham {
 	@Override
 	public String toString() {
 		return "SanPham [maSp=" + maSp + ", tenSp=" + tenSp + ", giaSp=" + giaSp + ", moTaSp=" + moTaSp + ", soLuong="
-				+ soLuong + ", anhSp=" + anhSp + ", trangThai=" + trangThai + ", loaiSanPham=" + loaiSanPham + "]";
+				+ soLuong + ", anhSp=" + anhSp + ", loaiSanPham=" + loaiSanPham + "]";
 	}
-    
-    
+
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/sanpham")
+@RequestMapping("/")
 public class SanPhamController {
 
     @Autowired
@@ -20,14 +20,14 @@ public class SanPhamController {
     public String getAllSanPham(Model model) {
         List<SanPham> sanPhams = sanPhamService.getAllSanPham();
         model.addAttribute("sanPhams", sanPhams);
-        return "WEB-INF/view/sanpham-list";
+        return "home";
     }
 
     @GetMapping("/{id}")
     public String getSanPhamById(@PathVariable int id, Model model) {
         SanPham sanPham = sanPhamService.getSanPhamById(id);
         model.addAttribute("sanPham", sanPham);
-        return "WEB-INF/view/sanpham-detail";
+        return "WEB-INF/views/sanpham-detail";
     }
 
     @PostMapping("/")

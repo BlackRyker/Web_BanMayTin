@@ -10,23 +10,23 @@ import java.util.List;
 @Service
 public class SanPhamServiceImpl implements SanPhamService {
 
-    @Autowired
-    private SanPhamDAO sanPhamDAO;
+	@Autowired
+	private SanPhamDAO sanPhamDAO;
 
-    @Override
-    public List<SanPham> getAllSanPham() {
-        return sanPhamDAO.getAllSanPham();
-    }
+	@Override
+	public List<SanPham> getAllSanPham() {
+		return sanPhamDAO.getAllSanPham();
+	}
 
-    @Override
-    public void saveSanPham(SanPham sanPham) {
-        sanPhamDAO.saveSanPham(sanPham);
-    }
+	@Override
+	public void saveSanPham(SanPham sanPham) {
+		sanPhamDAO.saveSanPham(sanPham);
+	}
 
-    @Override
-    public void deleteSanPham(int id) {
-        sanPhamDAO.deleteSanPham(id);
-    }
+	@Override
+	public void deleteSanPham(int id) {
+		sanPhamDAO.deleteSanPham(id);
+	}
 
 	@Override
 	public SanPham getSanPham(int maSp) {
