@@ -35,12 +35,6 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public SanPham getSanPham(int maSp) {
-		// TODO Auto-generated method stub
-		return sanPhamDAO.getSanPham(maSp);
-	}
-
-	@Override
 	@Transactional
 	public void deleteSanPham(int id) {
 		sanPhamDAO.deleteSanPham(id);

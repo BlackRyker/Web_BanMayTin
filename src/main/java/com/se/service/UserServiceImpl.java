@@ -10,7 +10,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 @Service
-public class SanPhamServiceImpl implements SanPhamService {
+public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private SanPhamDAO sanPhamDAO;

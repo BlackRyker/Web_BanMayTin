@@ -15,21 +15,27 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style.css" />
+	href="${pageContext.request.contextPath}/resources/css/admin.css" />
 </head>
 
 <body>
-	<div class="container">
-		<jsp:include page="header.jsp" />
+	<jsp:include page="admin-header.jsp" />
 
-		<div class="mt-4 mb-5">
-			<p class="text-danger fs-3 font-monospace border-1 w-100 mb-1">Danh
-				sách sản phẩm</p>
-			<jsp:include page="table.jsp" />
+	<div class="container-fluid">
+		<div class="row">
+			<jsp:include page="admin-sidebar.jsp" />
+
+
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				<jsp:include page="admin-chart.jsp" />
+				<h1 class="h2">Dashboard</h1>
+				<jsp:include page="admin-navbar.jsp" />
+
+				<h2>Section title</h2>
+				<jsp:include page="admin-table.jsp" />
+
+			</main>
 		</div>
-
-		<jsp:include page="footer.jsp" />
-
 	</div>
 </body>
 <script

@@ -6,9 +6,15 @@ import com.se.entity.SanPham;
 
 public interface AdminService {
 	List<SanPham> getAllSanPham();
+
 	void saveSanPham(SanPham sanPham);
-    SanPham getSanPham(int maSp);
-    void updateSanPham(SanPham sanPham);
-    void deleteSanPham(int maSp);
-    SanPham getSanPhamById(int maSp);
+
+//  update so luong sp trong gio hang
+	void updateSanPham(SanPham sanPham);
+
+//  xoa sp trong gio hang
+	void deleteSanPham(int maSp);
+
+//  get detail sp
+	SanPham getSanPhamById(int maSp);
 }

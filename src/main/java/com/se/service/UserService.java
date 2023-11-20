@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.se.entity.SanPham;
 
-public interface SanPhamService {
+public interface UserService {
 	List<SanPham> getAllSanPham();
 
 	void saveSanPham(SanPham sanPham);
