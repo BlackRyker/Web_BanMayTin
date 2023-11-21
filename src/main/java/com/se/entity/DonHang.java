@@ -75,11 +75,7 @@ public class DonHang {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "DonHang [maDh=" + maDh + ", ngayDat=" + ngayDat + ", tongTien=" + tongTien + ", taiKhoan=" + taiKhoan
-				+ "]";
-	}
+	
     
 
 }

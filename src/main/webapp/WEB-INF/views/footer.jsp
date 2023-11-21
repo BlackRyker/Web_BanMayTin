@@ -1,9 +1,10 @@
 <footer class=" p-3 bg-dark text-white">
 	<div class="container">
-		<div class="row">
+		<div class="row" style=' border-top-right-radius: 10px;
+	  border-top-left-radius: 10px;'>
 			<div class="col-md-12">
 				<p>
-					© 2017 - <a href="http://www.iesebre.com">IES Ebre</a>
+					2022-2023 @DK-copyright
 				</p>
 			</div>
 		</div>

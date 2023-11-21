@@ -60,10 +60,7 @@ public class LoaiSanPham {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "LoaiSanPham [maLoai=" + maLoai + ", tenLoai=" + tenLoai + ", sanPham=" + sanPham + "]";
-	}
+	
     
     
 }

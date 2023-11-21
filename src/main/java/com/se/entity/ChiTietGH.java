@@ -62,9 +62,6 @@ public class ChiTietGH implements Serializable {
 		this.soLuong = soLuong;
 	}
 
-	@Override
-	public String toString() {
-		return "ChiTietGH [gioHang=" + gioHang + ", sanPham=" + sanPham + ", soLuong=" + soLuong + "]";
-	}
+	
 
 }

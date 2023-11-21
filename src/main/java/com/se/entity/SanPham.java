@@ -110,10 +110,6 @@ public class SanPham {
 		this.loaiSanPham = loaiSanPham;
 	}
 
-	@Override
-	public String toString() {
-		return "SanPham [maSp=" + maSp + ", tenSp=" + tenSp + ", giaSp=" + giaSp + ", moTaSp=" + moTaSp + ", soLuong="
-				+ soLuong + ", anhSp=" + anhSp + ", loaiSanPham=" + loaiSanPham + "]";
-	}
+	
 
 }

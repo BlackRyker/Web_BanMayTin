@@ -87,11 +87,6 @@ public class TaiKhoan {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "TaiKhoan [maTk=" + maTk + ", tenDangNhap=" + tenDangNhap + ", matKhau=" + matKhau + ", khachHang="
-				+ khachHang + ", donHang=" + donHang + "]";
-	}
-    
+
     
 }

@@ -80,11 +80,6 @@ public class KhachHang {
 		this.taiKhoan = taiKhoan;
 	}
 
-	@Override
-	public String toString() {
-		return "KhachHang [maKh=" + maKh + ", tenKh=" + tenKh + ", email=" + email + ", diaChi=" + diaChi
-				+ ", soDienThoai=" + soDienThoai + ", taiKhoan=" + taiKhoan + "]";
-	}
 
 	public KhachHang(int maKh, String tenKh, String email, String diaChi, String soDienThoai, TaiKhoan taiKhoan) {
 		super();

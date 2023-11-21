@@ -18,11 +18,37 @@
 		<body>
 			<div class="container">
 				<jsp:include page="header.jsp" />
-				<jsp:include page="banner.jsp" />
 
-				<div class="mt-4 mb-5">
-					<p class="text-danger fs-3 font-monospace border-1 w-100 mb-1">Trending</p>
-					<jsp:include page="list-card.jsp" />
+				<div class="cart-container mt-4 mb-5">
+					<c:forEach var="temp" items="${carts}">
+						<c:url var="updateLink" value="/product">
+							<c:param name="maSp" value="${temp.sanPham.maSp}"></c:param>
+						</c:url>
+						<c:url var="deleteLink" value="/product/delete">
+							<c:param name="maSp" value="${temp.sanPham.maSp}"></c:param>
+						</c:url>
+
+						<div class="card mb-3" style="max-width: 540px;">
+							<div class="row g-0">
+								<div class="col-md-4">
+									<img src="${temp.sanPham.anhSp}" class="img-fluid rounded-start" alt="">
+								</div>
+								<div class="col-md-8">
+									<div class="card-body">
+										<h5 class="card-title">${temp.sanPham.tenSp}</h5>
+										<p class="card-text">${temp.sanPham.giaSp}</p>
+										<a href="${deleteLink}" class="mt-5 d-block">
+											<span class="material-symbols-outlined">
+												delete
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</c:forEach>
+
+
 				</div>
 
 				<jsp:include page="footer.jsp" />

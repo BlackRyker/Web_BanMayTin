@@ -11,6 +11,7 @@
 				crossorigin="anonymous">
 			<link rel="stylesheet"
 				href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+			<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css" />
 			<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/admin.css" />
 		</head>
 
@@ -25,7 +26,7 @@
 					<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 						<jsp:include page="admin-chart.jsp" />
 						<h1 class="h2">Product</h1>
-						<jsp:include page="admin-navbar.jsp" />
+						<jsp:include page="admin-navbar-product.jsp" />
 
 						<h2>Section title</h2>
 						<jsp:include page="admin-table.jsp" />

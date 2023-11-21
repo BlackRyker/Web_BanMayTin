@@ -48,10 +48,7 @@ public class GioHang {
 		this.taiKhoan = taiKhoan;
 	}
 
-	@Override
-	public String toString() {
-		return "GioHang [maGh=" + maGh + ", taiKhoan=" + taiKhoan + "]";
-	}
+	
     
     
 }

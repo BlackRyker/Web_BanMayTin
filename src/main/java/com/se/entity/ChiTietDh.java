@@ -38,11 +38,7 @@ public class ChiTietDh implements Serializable {
 		super();
 	}
 
-	@Override
-	public String toString() {
-		return "ChiTietDh [donHang=" + donHang + ", sanPham=" + sanPham + ", soLuong=" + soLuong + ", donGia=" + donGia
-				+ ", thanhTien=" + thanhTien + "]";
-	}
+	
 
 	public ChiTietDh(DonHang donHang, SanPham sanPham, int soLuong, BigDecimal donGia, BigDecimal thanhTien) {
 		super();

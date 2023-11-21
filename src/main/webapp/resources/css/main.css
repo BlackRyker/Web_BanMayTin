@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+video {
+  width: 100%;
+  object-fit: contain;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-cart {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #fafafa;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}

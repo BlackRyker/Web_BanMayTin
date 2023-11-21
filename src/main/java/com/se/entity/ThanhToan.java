@@ -87,11 +87,7 @@ public class ThanhToan {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "ThanhToan [maTt=" + maTt + ", ngayTt=" + ngayTt + ", soTien=" + soTien + ", phuongThuc=" + phuongThuc
-				+ ", donHang=" + donHang + "]";
-	}
+	
     
     
 }
